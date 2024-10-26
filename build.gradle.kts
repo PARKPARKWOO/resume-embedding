@@ -22,14 +22,16 @@ repositories {
 extra["springAiVersion"] = "1.0.0-M3"
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
-    implementation("org.springframework.ai:spring-ai-redis-store-spring-boot-starter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    // redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
+    implementation("org.springframework.ai:spring-ai-redis-store-spring-boot-starter")
 
     // reactor
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
