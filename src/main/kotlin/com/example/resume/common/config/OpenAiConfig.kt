@@ -13,7 +13,7 @@ class OpenAiConfig(
     val openAiKey: String,
 ) {
     @Bean
-    fun model(): EmbeddingModel = OpenAiEmbeddingModel(OpenAiApi(openAiKey))
+    fun embeddingModel(): EmbeddingModel = OpenAiEmbeddingModel(OpenAiApi(openAiKey))
 
 //    @Bean
 //    fun redisStack(): VectorStore {
@@ -21,3 +21,8 @@ class OpenAiConfig(
 //            .wit
 //    }
 }
+
+data class ResumeDto(
+    val feedback: String,
+    val question: String,
+)
