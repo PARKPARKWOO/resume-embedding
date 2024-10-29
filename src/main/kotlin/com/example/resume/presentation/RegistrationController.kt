@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile
 class RegistrationController(
     private val resumeFacade: ResumeFacade,
 ) {
-    @PostMapping("/resume")
+    @PostMapping(path = ["/resume"], consumes = ["multipart/form-data"])
     suspend fun registerResume(
         @RequestParam("resume")
         resume: MultipartFile,

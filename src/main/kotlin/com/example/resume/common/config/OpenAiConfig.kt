@@ -19,6 +19,8 @@ class OpenAiConfig(
     @Bean
     fun embeddingModel(): EmbeddingModel = OpenAiEmbeddingModel(OpenAiApi(openAiKey))
 
+
+
     @Bean
     fun redisStack(jedisPooled: JedisPooled): VectorStore {
         val config: RedisVectorStoreConfig = RedisVectorStoreConfig.builder()

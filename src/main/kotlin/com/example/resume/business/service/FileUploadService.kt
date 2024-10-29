@@ -19,7 +19,7 @@ class FileUploadService {
     }
 
     suspend fun saveLocal(multipartFile: MultipartFile): String {
-        if (Files.exists(UPLOAD_DIR)) {
+        if (!Files.exists(UPLOAD_DIR)) {
             withContext(Dispatchers.IO) {
                 Files.createDirectories(UPLOAD_DIR)
             }

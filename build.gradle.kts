@@ -28,6 +28,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
     // ai
     implementation("org.springframework.ai:spring-ai-pdf-document-reader:1.0.0-M1")
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
@@ -44,7 +46,8 @@ dependencies {
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 
     // swagger-ui
-    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.3.0")
+//    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.3.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
 }
 
 dependencyManagement {

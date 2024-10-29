@@ -25,7 +25,7 @@ open class SwaggerConfig {
         )
         .info(info())
 
-    private fun info() = Info().title("auth-api")
+    private fun info() = Info().title("resume-server")
         .description(
             """
             인증/인가 서버 API 명세

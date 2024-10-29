@@ -5,7 +5,7 @@ import org.springframework.ai.vectorstore.VectorStore
 import org.springframework.stereotype.Service
 
 @Service
-class RetrieveService(
+class VectorStoreDriver(
     private val vectorStore: VectorStore,
 ) {
     suspend fun retrieve(query: String): List<Document> {

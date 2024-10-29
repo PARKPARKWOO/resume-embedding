@@ -1,8 +1,10 @@
 spring:
+#  main:
+#    web-application-type: reactive
   ai:
     openai:
       api-key: ${OPEN_AI_API_KEY}
       chat:
         options:
           model: gpt-4o-mini
-          response-format: JSON_SCHEMA
+#          response-format: JSON_SCHEMA
