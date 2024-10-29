@@ -24,14 +24,20 @@ extra["springAiVersion"] = "1.0.0-M3"
 dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
+    // ai
+    implementation("org.springframework.ai:spring-ai-pdf-document-reader:1.0.0-M1")
+    implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
+
     // redis
     implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
     implementation("org.springframework.ai:spring-ai-redis-store-spring-boot-starter")
+    implementation("redis.clients:jedis:5.2.0")
 
     // reactor
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
@@ -40,7 +46,8 @@ dependencies {
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 
     // swagger-ui
-    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.3.0")
+//    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.3.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
 }
 
 dependencyManagement {
